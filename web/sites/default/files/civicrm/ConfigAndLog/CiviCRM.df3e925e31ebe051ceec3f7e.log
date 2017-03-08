@@ -1,0 +1,30 @@
+Feb 27 18:46:54  [info] Creating canary table
+
+Feb 27 18:48:45  [info] $Fatal Error Details = Array
+(
+    [message] => Cannot install this extension - curl is not installed!
+    [code] => 
+)
+
+
+Feb 27 18:48:45  [info] $backTrace = #0 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Core/Error.php(373): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Utils/HttpClient.php(85): CRM_Core_Error::fatal("Cannot install this extension - curl is not installed!")
+#2 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Extension/Browser.php(254): CRM_Utils_HttpClient->fetch("https://civicrm.org/extdir/ver=4.7.16|cms=Drupal/single", "/var/www/drupal1.jbmd.com/web/sites/default/files/civicrm/ext/cache/extension...")
+#3 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Extension/Browser.php(193): CRM_Extension_Browser->grabRemoteJson()
+#4 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Extension/Browser.php(148): CRM_Extension_Browser->_discoverRemote()
+#5 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Utils/Check/Component/Env.php(594): CRM_Extension_Browser->getExtensions()
+#6 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Utils/Check/Component.php(54): CRM_Utils_Check_Component_Env->checkExtensions()
+#7 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Utils/Check.php(209): CRM_Utils_Check_Component->checkAll()
+#8 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Utils/Check.php(93): CRM_Utils_Check::checkAll()
+#9 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Core/Page.php(218): CRM_Utils_Check->showPeriodicAlerts()
+#10 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Admin/Page/ConfigTaskList.php(59): CRM_Core_Page->run()
+#11 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Core/Invoke.php(310): CRM_Admin_Page_ConfigTaskList->run((Array:3), NULL)
+#12 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:14))
+#13 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#14 /var/www/drupal1.jbmd.com/web/sites/all/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:3))
+#15 [internal function](): civicrm_invoke("admin", "configtask")
+#16 /var/www/drupal1.jbmd.com/web/includes/menu.inc(527): call_user_func_array("civicrm_invoke", (Array:2))
+#17 /var/www/drupal1.jbmd.com/web/index.php(21): menu_execute_active_handler()
+#18 {main}
+
+
